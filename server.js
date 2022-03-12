@@ -19,12 +19,16 @@ contacts_app.post('/login',async (req,res)=>{const user = await allusers.findOne
       Password:req.body.password
     }
   }).then((users)=>{
-      /*if(isNaN(users)&&){
-          res.send('you dont have account please register')
-      }*/
+      
       console.log(users)
+   if(users===null){
+        res.send('you dont have account please register')
+      }
+      else{
+     
      res.redirect('/api/mycontacts')
      
+      }
      
   })
   .catch((err)=>{
