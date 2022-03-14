@@ -25,8 +25,8 @@ contacts_app.post('/login',async (req,res)=>{const user = await allusers.findOne
         res.send('you dont have account please register')
       }
       else{
-     
-     res.redirect('/api/mycontacts')
+      res.sendFile(path.join(__dirname,'public/index.html'))
+     //res.redirect('/api/mycontacts')
      
       }
      
