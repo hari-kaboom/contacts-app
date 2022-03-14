@@ -9,6 +9,9 @@ contacts_app.use(server.json())
 contacts_app.use(server.urlencoded({extended:true}))
 const port=5757
 contacts_app.use('/register' ,server.static(path.join(__dirname,'views')))
+contacts_app.get('/register_user',(req,res)=>{
+  res.sendFile(path.join(__dirname,'views/signup.html'))
+})
 allusers=require('./db').allusers
 contacts_app.use('/' ,server.static(path.join(__dirname,'public')))
 contacts_app.use('/api' ,require('./routes/api').routes)
