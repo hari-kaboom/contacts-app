@@ -4,11 +4,11 @@ function fetch_products(done){
         done(data)
     })
 }
-function addproduct(name,manu,price,done){
+function addproduct(name,phno,email,done){
     console.log('hihihgi') 
     //console.log(name,manu,price)
     $.post('/api/mycontacts',
-    {name:name,Phno:manu,email:price},
+    {name:name,Phno:phno,email:email},
     function(data){
         done(data)
     })
