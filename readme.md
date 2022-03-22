@@ -53,4 +53,11 @@ Creating our project directory:
          .       -----POST request to localhost:5757/login   (postman used)
          .----model
          .    ---db.js
-         
+ How to use :
+ for login page:
+     http://localhost:5757/login in this page we are able to login into my app if you have account .
+     if you dont have account then click on signup link to register.
+ After login into app:
+     fill the details like name, phone number,email id whom you want to save then click on save button .
+     finally you able to see your contacts after refreshing current webpage.
+ 
