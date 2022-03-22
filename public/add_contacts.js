@@ -1,15 +1,15 @@
 $(function(){
-    let productname=$('#productname')
-    let productmanufacturer=$('#productmanufacturer')
-    let productprice=$('#productprice')
+    let name=$('#name')
+    let phno=$('#phno')
+    let email=$('#email')
     
     $('#btnproductadd').click(function(){
-        console.log(productmanufacturer.val(),productname.val())
+        //console.log(productmanufacturer.val(),productname.val())
         //window.alert('Added'+'addtodatabase')
         addproduct(
-            productname.val(),
-            productmanufacturer.val(),
-            productprice.val(),
+            name.val(),
+            phno.val(),
+            email.val(),
             function(addedproduct){
                 window.alert('Added'+addedproduct+'addtodatabase')
             }
